@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #bai1 {
+            border: 2px solid black;
+            font-size: 20px;
+            padding: 20px;
+        }
+
+        #bai2 {
+            border: 2px solid black;
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        #bai3 {
+            border: 2px solid black;
+            padding: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bai1"></div>
+    <div id="bai2"></div>
+    <div id="bai3"></div>
+
+    <script>
+        const DivId = document.getElementById('bai1');
+        const arrays = [1, 2, 3, 4, 5];
+        var evenNumber = 0;
+        for (let i = 0; i < arrays.length; i++) {
+            if (arrays[i] % 2 === 0) {
+                evenNumber++;
+            }
+        }
+
+        DivId.innerHTML = arrays.toString();
+        DivId.innerHTML += "<br>";
+        DivId.innerHTML += "Mang co so chu chan la: " + evenNumber + "<br>";
+        DivId.innerHTML += "Mang co so chu le la: " + (arrays.length - evenNumber);
+
+    </script>
+
+    <script>
+        const DivId2 = document.getElementById('bai2');
+        const arrays2 = [3, 5, 1, 4, 2];
+
+        DivId2.innerHTML += '<br/>';
+        DivId2.innerHTML += "Mang truoc khi sap xep: " + arrays2.toString() + '<br/>';
+        for (let i = 0; i < arrays2.length - 1; i++) {
+            for (let j = i + 1; j < arrays2.length; j++) {
+                if (arrays2[i] > arrays2[j]) {
+                    let temp = arrays2[i];
+                    arrays2[i] = arrays2[j];
+                    arrays2[j] = temp;
+                }
+            }
+        }
+
+        DivId2.innerHTML += "Mang sau khi sap xep: " + arrays2.toString() + '<br/>';
+
+    </script>
+
+    <script>
+        const DivId3 = document.getElementById('bai3');
+        DivId3.innerHTML = 'Ngay hom nay la: ';
+        const today = new Date();
+        DivId3.innerHTML += today.toString();
+
+    </script>
+
+    <script>
+        const mang = [
+            "This is paragraph 1",
+            "This is paragraph 2",
+            "This is paragraph 3",
+            "This is paragraph 4",
+            "This is paragraph 5"
+        ]
+
+    </script>
+</body>
+
+</html>
